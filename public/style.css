@@ -1,0 +1,498 @@
+@font-face {
+    font-family: BAS;
+    src: url(./font/BAUHS93.ttf);
+}
+
+@keyframes spring {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(359deg)
+    }
+}
+
+@keyframes closeAdder {
+    0% {}
+    100% {
+        height: 0px
+    }
+}
+
+@font-face {
+    font-family: Vazir;
+    src: url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.eot');
+    src: url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.eot?#iefix') format('embedded-opentype'), url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.woff2') format('woff2'), url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.woff') format('woff'), url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.ttf') format('truetype');
+    font-weight: normal;
+}
+
+* {
+    font-family: Vazir;
+    transition: all 0.3s;
+}
+
+.rtl {
+    direction: rtl
+}
+
+a {
+    color: #000 !important
+}
+
+.header-down-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%
+}
+
+.nofocus:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.header-down-btn:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: #d3d2d2;
+}
+
+.basfont {
+    font-family: BAS !important
+}
+
+.mobile_row {
+    max-width: 360;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-white {
+    background: #fff;
+}
+
+.header {
+    width: 100%;
+    border-radius: 0px 0px 10px 10px;
+    height: 80px;
+    background: #EAEAEA;
+    box-shadow: 0px 4px 11px -8px black;
+    position: sticky;
+    top: 0px;
+    overflow: hidden;
+}
+
+.header-header {
+    width: 100%;
+    max-height: 80px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.newTodo {
+    border-radius: 10px;
+    width: 98%;
+    padding: 10px 20px;
+    margin: 30px auto;
+    background: #EAEAEA;
+    box-shadow: 0px 4px 11px -8px black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.newTodo button {
+    width: 60px;
+    height: 30px;
+    border-radius: 15px !important;
+}
+
+.dateBox {
+    width: 98%;
+    padding: 10px;
+    margin: 10px auto;
+}
+
+.AddNewTodo {
+    padding: 10px;
+    width: 98%;
+    margin: 10px auto;
+    position: relative;
+    height: 300px
+}
+
+.AddNewTodo.animate__bounceOutLeft {
+    overflow: hidden;
+    height: 0px;
+    animation-duration: 0.4s;
+    transition: all 0.9s;
+}
+
+.AddNewTodo form.Box {
+    background: #EAEAEA;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.AddNewTodo form.Box input,
+.AddNewTodo form.Box textarea {
+    color: #000000ad;
+}
+
+.btn-holder {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    bottom: -15px;
+    flex-direction: row-reverse;
+    align-items: start;
+    left: 0px;
+}
+
+.btn-holder button,
+.btn-holder a {
+    width: 100px;
+    height: 30px;
+    padding: 3px 12px;
+    margin: 5px 10px;
+    border-radius: 10px;
+}
+
+.datapicker input {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px 10px
+}
+
+.boxTitle {
+    font-size: 12px;
+    color: #ffff;
+    border-radius: 10px 10px 0px 0px;
+    background: #9E0000;
+    max-width: max-content;
+    padding: 5px 10px;
+    margin-left: 13px;
+}
+
+.dateBox ul.nav.nav-tabs {
+    background: #AAAAAA;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.dateBox ul.nav.nav-tabs .active {
+    background: #EAEAEA;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.dateBox ul.nav.nav-tabs li.nav-item>a {
+    display: flex;
+    height: 100%;
+    padding: 8px 0px;
+    font-size: 16px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dateBox ul.nav.nav-tabs li.nav-item {
+    width: 50%;
+    text-align: center;
+}
+
+ul.dateGrid {
+    width: 102%;
+    max-height: 360px;
+    display: flex;
+    border-radius: 10px;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: start;
+    flex-grow: start;
+    margin-left: -3px;
+}
+
+ul.dateGrid::after {
+    content: "";
+    flex: auto;
+}
+
+ul.dateGrid li {
+    list-style: none;
+    width: 105px;
+    height: 100px;
+    background: #D8D8D8;
+    margin-top: 3px;
+    margin-left: 3px;
+    border-radius: 5px
+}
+
+ul.dateGrid li a {
+    display: flex !important;
+    width: 100%;
+    height: 100%;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+ul.dateGrid li a span:first-child {
+    font-size: 23px
+}
+
+ul.dateGrid>li>a .small {
+    font-size: 10px;
+}
+
+ul.dateGrid>li>a>span {
+    display: block
+}
+
+ul.dateGrid>li.active {
+    background: #EAEAEA;
+    position: relative;
+}
+
+ul.dateGrid>li.active::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 10px;
+    left: 10px;
+    background: red;
+    border-radius: 100%;
+}
+
+.Loading {
+    position: relative;
+}
+
+.Loading:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #000000cb;
+    z-index: 2;
+    left: 0px;
+    top: 0px;
+}
+
+.Loading div {
+    filter: blur(5px);
+}
+
+.Loading::after {
+    content: "\f110";
+    position: absolute;
+    left: 48%;
+    top: 48%;
+    color: #fff;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 35px;
+    animation: spring 2s infinite linear;
+    filter: blur(0px) !important;
+    z-index: 3;
+}
+
+.eKcXbM {
+    max-height: none !important;
+}
+
+.cldisZ .rdp__overlay {
+    position: absolute;
+    top: unset !important;
+    right: 0;
+    width: 100%;
+    height: 1000px !important;
+    z-index: -9999;
+    background-color: rgba(86, 86, 86, 0.4);
+}
+
+.sc-gzVnrw {
+    font-size: 19px !important;
+    padding-bottom: 7 !important;
+}
+
+.Date_Header {
+    display: flex;
+    max-width: 100%;
+    height: 60px;
+    background: #ddd;
+    margin-top: 10px;
+    position: relative;
+}
+
+.Date_Header>.date_item {
+    width: 60px;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px 0px;
+    font-size: 14px;
+    top: 0px;
+    transition: all 0.3s;
+    text-decoration: none !important;
+}
+
+.Date_Header>.date_item.active {
+    height: 94px;
+    background: #0D78D1;
+    color: #fff;
+    border-radius: 0px 0px 10px 10px;
+    justify-content: center;
+    box-shadow: 3px 2px 7px 0px #000000ab;
+}
+
+.Date_Header>.date_item.active span {
+    color: #fff;
+    margin: 11px auto
+}
+
+.Date_Header>.date_item span {
+    display: block;
+    font-weight: 900;
+    color: #aaa;
+}
+
+.Date_Header>.date_item span:last-child {
+    font-size: 10px
+}
+
+.TimelineContainer {
+    margin-top: 80px;
+    width: 100%;
+    height: 100%;
+}
+
+.TimelineDate {
+    font-size: 14px;
+    font-family: Vazir;
+    margin-right: 21px;
+    color: #6c757d85 !important;
+    margin-left: 12px;
+}
+
+.TimeLine {
+    margin: 15px 5px;
+    padding: 0px 0px 0px 27px;
+    list-style: none;
+}
+
+.TimeLine-Item {
+    position: relative;
+}
+
+.TimeLine-Item.active::before {
+    content: "\f00c";
+    width: 23px;
+    height: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0D78D1;
+    color: #fff;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    top: 0px;
+    left: -25px;
+    position: absolute;
+    border-radius: 100%
+}
+
+.EndTimeLine {
+    position: relative;
+}
+
+.EndTimeLine::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #a0a2a2;
+    top: -2px;
+    left: -24px;
+    position: absolute;
+    border-radius: 100%
+}
+
+.TimeLine-Item::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #a0a2a2;
+    top: 2px;
+    left: -21px;
+    position: absolute;
+    border-radius: 100%
+}
+
+.TimeLine-Item.active::after {
+    content: "";
+    width: 3px;
+    height: 87%;
+    background: #a0a2a2;
+    top: 29px;
+    left: -16px;
+    position: absolute;
+}
+
+.TimeLine-Item::after {
+    content: "";
+    width: 3px;
+    height: 87%;
+    background: #a0a2a2;
+    top: 26px;
+    left: -16px;
+    position: absolute;
+}
+
+.TimeLine .clock {
+    font-size: 14px;
+    font-family: Vazir;
+    margin-right: 21px;
+    color: #979797;
+    margin-left: 12px;
+}
+
+.TimeLine .title {
+    font-size: 15px;
+    font-family: Vazir;
+    font-weight: 900;
+    color: black;
+    text-transform: capitalize
+}
+
+.TimeLine-caption {
+    text-align: justify !important;
+    font-size: 10px
+}
+
+.TimeLine-actions {
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+.TimeLine-actions button,
+.TimeLine-actions a {
+    width: 56px;
+    height: 26px;
+    margin: 0px 5px;
+    padding: 3px 0px 0px;
+    font-size: 12px;
+}
